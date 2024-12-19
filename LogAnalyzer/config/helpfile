@@ -1,0 +1,11 @@
+Bitte verwenden sie dieses Tool nach folgender Konfiguration:
+Allgemeine:
+-h Hilfe
+-q Exit
+-l um ein Logfile zu analysieren [Name der Datei] [Befehl] [Parameter]
+
+Befehle:
+- lc lines containing String
+- lb lines between two Strings
+- cb content between two keywords
+
