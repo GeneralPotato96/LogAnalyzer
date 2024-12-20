@@ -20,6 +20,8 @@ def get_lines_containing_keywords(content: str, keywords: list) -> list:
             tmp_lines.append(line)
     
     tmp_text = '\n'.join(tmp_lines)
+
+    print(f"TMP_LINES: {tmp_lines}")
         
     if len(tmp_lines) == 0 or len(keywords) == 1:
         #recursion anchor

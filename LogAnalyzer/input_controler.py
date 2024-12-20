@@ -2,9 +2,10 @@
 '''
 This module awaits and process user input
 '''
-from analyzeTools.filter_content import get_lines_containing_keywords
 from pathlib import Path
-from utils.read_and_write_file import read_file_to_string_win
+
+from LogAnalyzer.analyzeTools.filter_content import get_lines_containing_keywords
+from LogAnalyzer.utils.read_and_write_file import read_file_to_string_win
 
 def show_help():
     helpfile_path = Path(__file__).parent / "config" / "helpfile"
@@ -33,11 +34,13 @@ def process_command_and_show_result(file_path: Path, command: str, *args):
 def command_is_valid(command: str) -> bool:
     '''checks if command is valid'''
     
+    #TODO: move command_list to props file 
     command_list = ["lc", "lb", "cb"]
-    if any(command_list in command for comm in command_list):
-        return True
-    else:
-        return False
+    for comm in command_list:
+        if comm == command:
+            return True
+        
+    return False
     
     
 def handle_commands(*args):
@@ -46,7 +49,8 @@ def handle_commands(*args):
     '''
     
     #TODO: decide if switch cases are the better option
-    
+    #TODO: add the other 'Befehle'
+
     if len(args) < 1:
         print("ERROR Bitte übergeben wir sie mindestsn ein Komando")
     elif args[0] == '-h':

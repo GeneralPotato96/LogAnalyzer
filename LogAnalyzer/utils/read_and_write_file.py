@@ -11,7 +11,7 @@ def read_file_to_string_win(file_path: Path) -> str:
         String: File as String
     """
     with file_path.open("r") as file:
-        return file
+        return file.read()
 
 def write_string_to_file_win(file_content: str, file_path: Path):
     """
