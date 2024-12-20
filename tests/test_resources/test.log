@@ -1,0 +1,20 @@
+2024-12-19 10:00:01 INFO  MainApp - Starting application...
+2024-12-19 10:00:02 DEBUG ConfigLoader - Loading configuration from file: config.properties
+2024-12-19 10:00:03 INFO  DatabaseConnector - Connecting to database at jdbc:mysql://localhost:3306/appdb
+2024-12-19 10:00:04 DEBUG DatabaseConnector - Connection established successfully.
+2024-12-19 10:00:05 INFO  UserService - Fetching user with ID: 12345
+2024-12-19 10:00:06 WARN  CacheManager - Cache miss for key: user_12345
+2024-12-19 10:00:07 DEBUG DatabaseQuery - Executing query: SELECT * FROM users WHERE id = 12345
+2024-12-19 10:00:08 INFO  UserService - User fetched successfully: John Doe
+2024-12-19 10:00:09 ERROR FileUploader - Failed to upload file: FileNotFoundException: file.txt not found
+2024-12-19 10:00:10 DEBUG RetryHandler - Retrying operation: Upload file (Attempt 1 of 3)
+2024-12-19 10:00:11 INFO  FileUploader - File uploaded successfully: file.txt
+2024-12-19 10:00:12 INFO  NotificationService - Sending email to: john.doe@example.com
+2024-12-19 10:00:13 DEBUG EmailClient - Connecting to SMTP server: smtp.example.com
+2024-12-19 10:00:14 DEBUG EmailClient - Email sent successfully to: john.doe@example.com
+2024-12-19 10:00:15 WARN  AuthService - Unsuccessful login attempt for user: jane.doe@example.com
+2024-12-19 10:00:16 INFO  AuthService - Login successful for user: admin@example.com
+2024-12-19 10:00:17 DEBUG SessionManager - Created session for user: admin@example.com
+2024-12-19 10:00:18 INFO  MainApp - Application running smoothly.
+2024-12-19 10:00:19 ERROR ReportGenerator - Failed to generate report: NullPointerException
+2024-12-19 10:00:20 INFO  MainApp - Shutting down application...
